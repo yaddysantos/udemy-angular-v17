@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { TitleComponent } from '@share/title/title.component';
 
 type Grade = 'A' | 'B' | 'C';
 @Component({
   selector: 'app-control-flow',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TitleComponent],
   templateUrl: './control-flow.component.html',
   styleUrl: './control-flow.component.css',
 })
