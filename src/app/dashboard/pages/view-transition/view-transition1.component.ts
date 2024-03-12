@@ -6,6 +6,7 @@ import { TitleComponent } from '@share/title/title.component';
   selector: 'app-view-transition',
   standalone: true,
   imports: [CommonModule, TitleComponent],
+  styleUrl: './view-transaction.component.css',
   template: `
   <app-title [title]="'View Transantion 1'"></app-title>
     <section class="flex justify-start">
@@ -14,8 +15,9 @@ import { TitleComponent } from '@share/title/title.component';
         alt="planet"
         width="200px"
         height="300px"
+        style="view-transition-name: hero1"
       />
-      <div class="bg-blue-500 w-56 h-56" style="width: 200px;"></div>
+      <div class="bg-blue-500 div-section" style="view-transition-name: hero2"></div>
     </section>`,
 })
 export class ViewTransition1Component {}

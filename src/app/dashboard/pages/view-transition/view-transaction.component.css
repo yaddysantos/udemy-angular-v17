@@ -1,0 +1,17 @@
+.transition-2 {
+    display: flex;
+    justify-content: end;
+}
+
+.div-section{
+    width: 224px;
+    height: 224px;
+}
+
+.div-section-2{
+    width: 128px;
+    height: 128px;
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+}

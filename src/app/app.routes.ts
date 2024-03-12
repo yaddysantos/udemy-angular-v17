@@ -6,7 +6,7 @@ import { DeferViewsComponent } from './dashboard/pages/defer-views/defer-views.c
 import { UserComponent } from './dashboard/pages/user/user.component';
 import { UsersComponent } from './dashboard/pages/users/users.component';
 import { ViewTransition1Component } from './dashboard/pages/view-transition/view-transition1.component';
-import { ViewTransition2Component } from './dashboard/pages/view-transition/view-transition2.component copy';
+import { ViewTransition2Component } from './dashboard/pages/view-transition/view-transition2.component';
 
 export const routes: Routes = [
   {
