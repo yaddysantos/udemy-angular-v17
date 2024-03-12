@@ -1,8 +1,21 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)]
+  //providers: [provideRouter(routes)]
+
+  // crear un provider de manera global
+  providers: [
+    provideRouter(
+      routes,
+      withViewTransitions({
+        skipInitialTransition: true,
+        onViewTransitionCreated(transitionInfo) {
+          console.log(transitionInfo);
+        },
+      })
+    ),
+  ],
 };

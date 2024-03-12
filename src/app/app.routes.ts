@@ -5,7 +5,8 @@ import { DeferOptionsComponent } from './dashboard/pages/defer-options/defer-opt
 import { DeferViewsComponent } from './dashboard/pages/defer-views/defer-views.component';
 import { UserComponent } from './dashboard/pages/user/user.component';
 import { UsersComponent } from './dashboard/pages/users/users.component';
-import { ViewTransitionComponent } from './dashboard/pages/view-transition/view-transition.component';
+import { ViewTransition1Component } from './dashboard/pages/view-transition/view-transition1.component';
+import { ViewTransition2Component } from './dashboard/pages/view-transition/view-transition2.component copy';
 
 export const routes: Routes = [
   {
@@ -43,9 +44,14 @@ export const routes: Routes = [
         component: UsersComponent
       },
       {
-        path: 'view-transition',
-        title: 'View Transition',
-        component: ViewTransitionComponent
+        path: 'view-transition-1',
+        title: 'View Transition 1',
+        component: ViewTransition1Component
+      },
+      {
+        path: 'view-transition-2',
+        title: 'View Transition 2',
+        component: ViewTransition2Component
       },
       {
         path:'', redirectTo: 'control-flow', pathMatch: 'full'
