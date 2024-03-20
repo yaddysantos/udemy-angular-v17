@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop'; //permite tomar un observable y emitir una signal
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '@services/user.service';
@@ -21,10 +21,20 @@ export class UserComponent {
   // public user = signal<User | undefined>(undefined);
   public user = toSignal(
     this.route.params.pipe(
-      switchMap(({id}) => this.userService.getUserById(id)) //permite aplanar el observable
+      switchMap(({ id }) => this.userService.getUserById(id)) //permite aplanar el observable
     )
   );
 
+  // title label = informacion del usuario: Tracey Ramos
+  public titleLabel = computed(() => {
+    if (this.user()) {
+      return `Información del usuario: ${this.user()?.first_name} ${
+        this.user()?.last_name
+      }`;
+    }
+
+    return 'Información del usuario:';
+  });
   // constructor(){
   //   this.route.params.subscribe(params => {
   //     console.log(params);
