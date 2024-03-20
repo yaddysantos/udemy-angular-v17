@@ -1,5 +1,5 @@
 // Generate by https://reqres.in/ list users
-export interface UserResponse {
+export interface UsersResponse {
   page: number;
   per_page: number;
   total: number;
@@ -8,6 +8,10 @@ export interface UserResponse {
   support: Support;
 }
 
+export interface UserResponse {
+  data: User;
+  support: Support
+}
 export interface User {
   id: number;
   email: string;
